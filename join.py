@@ -75,4 +75,4 @@ class Join:
 		print("Total IO:", ios + self.p1 + self.p2)
 
 
-Join(100, 100 * 100, 50, 50 * 50, 20).sort()
+# Join(100, 100 * 100, 50, 50 * 50, 20).sort()

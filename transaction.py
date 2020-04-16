@@ -11,6 +11,7 @@ def depGraph(schedule, filename):
 				G.add_edge(schedule[i][0], schedule[j][0])
 	nx.draw(G, with_labels=True)
 	plt.savefig(filename + ".png")
+	plt.clf()
 	return nx.is_directed_acyclic_graph(G)
 
 
@@ -26,10 +27,11 @@ def waitGraph(schedule, filename):
 				G.add_edge(schedule[j][0], schedule[i][0])
 	nx.draw(G, with_labels=True)
 	plt.savefig(filename + ".png")
+	plt.clf()
 	return nx.is_directed_acyclic_graph(G)
 
 
 # print(depGraph("3RC 1RA 1WA 1RB 2WB 2RC 2WC 2WA 3WD", '1'))
 # depGraph("1RA 2RA 1RB 2RB 3RA 4RB 1WA 2WB", '2')
 
-print(waitGraph("1SA 1SD 2XB 1SB 3SD 3SC 2XC 4XB 3XA", '3'))
+# print(waitGraph("1SA 1SD 2XB 1SB 3SD 3SC 2XC 4XB 3XA", '3'))
